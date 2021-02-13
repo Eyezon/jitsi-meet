@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* global $, APP, YT, interfaceConfig, onPlayerReady, onPlayerStateChange,
 onPlayerError */
 
