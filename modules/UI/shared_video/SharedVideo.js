@@ -732,7 +732,7 @@ function requestVideoLink() {
 
     // eslint-disable-next-line no-unused-vars
     return new Promise((resolve, reject) => {
-        console.log(window.location);
+        // console.log(window.location);
 
         const url = window.location.href;
         // eslint-disable-next-line no-unused-vars
