@@ -728,13 +728,16 @@ function requestVideoLink() {
         = i18n.generateTranslationHTML('dialog.shareVideoLinkError');
 
     return new Promise((resolve, reject) => {
-        dialog = APP.UI.messageHandler.openDialogWithStates({
+        resolve('HPgPc_3nJkE');
+
+        /* dialog = APP.UI.messageHandler.openDialogWithStates({
             state0: {
                 titleKey: 'dialog.shareVideoTitle',
                 html: `
                     <input name='sharedVideoUrl' type='text'
                            class='input-control'
                            data-i18n='[placeholder]defaultLink'
+                           value='https://www.youtube.com/watch?v=HPgPc_3nJkE'
                            autofocus>`,
                 persistent: false,
                 buttons: [
@@ -803,6 +806,6 @@ function requestVideoLink() {
             }
         }, {
             url: defaultSharedVideoLink
-        });
+        }); */
     });
 }

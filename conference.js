@@ -125,7 +125,7 @@ import {
 } from './react/features/prejoin';
 import { disableReceiver, stopReceiver } from './react/features/remote-control';
 import { toggleScreenshotCaptureEffect } from './react/features/screenshot-capture';
-import { setSharedVideoStatus } from './react/features/shared-video';
+import { setSharedVideoStatus, toggleSharedVideo } from './react/features/shared-video';
 import { AudioMixerEffect } from './react/features/stream-effects/audio-mixer/AudioMixerEffect';
 import { createPresenterEffect } from './react/features/stream-effects/presenter';
 import { endpointMessageReceived } from './react/features/subtitles';
@@ -1311,6 +1311,11 @@ export default {
         sendLocalParticipant(APP.store, room);
 
         this._setupListeners();
+
+        setTimeout(() => {
+            APP.store.dispatch(toggleSharedVideo());
+        }, 3000);
+
     },
 
     /**
