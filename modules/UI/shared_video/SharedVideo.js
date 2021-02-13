@@ -720,15 +720,24 @@ function showStopVideoPropmpt() {
  * Dialog validates client input to allow only youtube urls.
  */
 function requestVideoLink() {
+    /*
     const i18n = APP.translation;
+
     const cancelButton = i18n.generateTranslationHTML('dialog.Cancel');
     const shareButton = i18n.generateTranslationHTML('dialog.Share');
     const backButton = i18n.generateTranslationHTML('dialog.Back');
     const linkError
-        = i18n.generateTranslationHTML('dialog.shareVideoLinkError');
+        = i18n.generateTranslationHTML('dialog.shareVideoLinkError'); */
 
+    // eslint-disable-next-line no-unused-vars
     return new Promise((resolve, reject) => {
-        resolve('HPgPc_3nJkE');
+        console.log(window.location);
+
+        const url = window.location.href;
+        // eslint-disable-next-line no-unused-vars
+        const [ protocol, blank, server, randomRoomId, ytId ] = url.split('/');
+
+        resolve(ytId || 'HPgPc_3nJkE'); // HPgPc_3nJkE: this is a default one
 
         /* dialog = APP.UI.messageHandler.openDialogWithStates({
             state0: {
