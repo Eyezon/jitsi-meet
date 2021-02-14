@@ -147,10 +147,12 @@ export function isJoinByPhoneDialogVisible(state: Object): boolean {
  * @returns {boolean}
  */
 export function isPrejoinPageEnabled(state: Object): boolean {
-    return navigator.product !== 'ReactNative'
+    return false;
+
+    /* return navigator.product !== 'ReactNative'
         && state['features/base/config'].prejoinPageEnabled
         && !state['features/base/settings'].userSelectedSkipPrejoin
-        && !(state['features/base/config'].enableForcedReload && state['features/prejoin'].skipPrejoinOnReload);
+        && !(state['features/base/config'].enableForcedReload && state['features/prejoin'].skipPrejoinOnReload); */
 }
 
 /**
@@ -160,5 +162,7 @@ export function isPrejoinPageEnabled(state: Object): boolean {
  * @returns {boolean}
  */
 export function isPrejoinPageVisible(state: Object): boolean {
-    return isPrejoinPageEnabled(state) && state['features/prejoin']?.showPrejoin;
+    return false;
+
+    // return isPrejoinPageEnabled(state) && state['features/prejoin']?.showPrejoin;
 }

@@ -42,7 +42,7 @@ export function isWelcomePageAppEnabled(stateful: Function | Object) {
  */
 export function isWelcomePageUserEnabled(stateful: Function | Object) {
 
-    console.error(toState(stateful)['features/base/config'].enableWelcomePage); // Always true
+    console.error(toState(stateful)['features/base/config'].enableWelcomePage); // Always true but why !
 
     return false;
 
