@@ -1312,9 +1312,9 @@ export default {
 
         this._setupListeners();
 
-        setTimeout(() => {
+        /* setTimeout(() => {
             APP.store.dispatch(toggleSharedVideo());
-        }, 3000);
+        }, 3000); */
 
     },
 

@@ -5,6 +5,7 @@ import type { Dispatch } from 'redux';
 declare var APP: Object;
 declare var config: Object;
 
+import { toggleSharedVideo } from '../../shared-video';
 import { configureInitialDevices } from '../devices';
 import { getBackendSafeRoomName } from '../util';
 
@@ -30,7 +31,11 @@ export function connect() {
         return dispatch(configureInitialDevices()).then(
             () => APP.conference.init({
                 roomName: room
-            }).catch(error => {
+            })
+            .then(() => {
+                APP.store.dispatch(toggleSharedVideo());
+            })
+            .catch(error => {
                 APP.API.notifyConferenceLeft(APP.conference.roomName);
                 logger.error(error);
             }));
